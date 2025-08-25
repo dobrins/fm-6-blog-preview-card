@@ -48,11 +48,6 @@ body {
   box-sizing: border-box;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  html {
-    interpolate-size: allow-keywords;
-  }
-}
 body {
   -webkit-font-smoothing: antialiased;
 }
@@ -161,7 +156,7 @@ main {
   align-items: center;
   gap: var(--space-150);
 }
-.article a:hover h1 {
+.article a:hover {
   color: var(--yellow);
 }
 
