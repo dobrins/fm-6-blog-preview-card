@@ -1,0 +1,168 @@
+:root {
+  --medium: 500;
+  --extraBold: 800;
+  --font-body: "Figtree", sans-serif;
+  --white: hsl(0, 0%, 100%);
+  --yellow: hsl(47, 88%, 63%);
+  --grey-500: hsl(0, 0%, 42%);
+  --grey-950: hsl(0, 0%, 7%);
+  --space-0: 0;
+  --space-12: 0.0625rem;
+  --space-50: 0.25rem;
+  --space-100: 0.5rem;
+  --space-125: 0.625rem;
+  --space-150: 0.75rem;
+  --space-175: 0.875rem;
+  --space-200: 1rem;
+  --space-250: 1.25rem;
+  --space-300: 1.5rem;
+  --space-400: 2rem;
+  --space-500: 2.5rem;
+  --space-600: 3rem;
+  --space-700: 3.5rem;
+  --space-800: 4rem;
+  --space-900: 4.5rem;
+  --space-1000: 5rem;
+  --space-1050: 5.5rem;
+  --space-1100: 6rem;
+  --space-1400: 7rem;
+  --space-1500: 7.5rem;
+  --space-1600: 8rem;
+}
+
+body {
+  font-size: var(--space-175);
+  font-weight: var(--medium);
+  font-family: var(--font-body);
+  color: var(--gra-600);
+  background-color: var(--yellow);
+  line-height: 1.5;
+  letter-spacing: 0;
+}
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    interpolate-size: allow-keywords;
+  }
+}
+body {
+  -webkit-font-smoothing: antialiased;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-wrap: balance;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+a:focus-visible {
+  outline: 0;
+}
+
+main {
+  width: 100dvw;
+  height: 100dvh;
+  display: grid;
+  place-items: center;
+  padding: var(--space-300);
+}
+
+.article {
+  display: grid;
+  gap: var(--space-300);
+  max-width: 24rem;
+  background-color: var(--white);
+  padding: var(--space-300);
+  border-radius: var(--space-250);
+  border: var(--space-12) solid var(--grey-950);
+  box-shadow: var(--space-100) var(--space-100) 0 var(--grey-950);
+}
+.article__img {
+  border-radius: var(--space-125);
+}
+.article__content {
+  display: grid;
+  gap: var(--space-150);
+  justify-items: start;
+}
+.article__tag {
+  font-size: var(--space-175);
+  font-weight: var(--extraBold);
+  display: inline-block;
+  border-radius: var(--space-50);
+  background-color: var(--yellow);
+  padding: var(--space-50) var(--space-150);
+}
+.article__title {
+  font-size: var(--space-300);
+  font-weight: var(--extraBold);
+}
+.article__summary {
+  font-size: var(--space-200);
+  font-weight: var(--medium);
+  color: var(--grey-500);
+}
+.article__author {
+  font-size: var(--space-175);
+  font-weight: var(--extraBold);
+  display: grid;
+  grid-template-columns: var(--space-400) max-content;
+  align-items: center;
+  gap: var(--space-150);
+}
+.article a:hover h1 {
+  color: var(--yellow);
+}
+
+/*# sourceMappingURL=style.css.map */

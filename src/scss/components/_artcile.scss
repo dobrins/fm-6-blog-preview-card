@@ -1,0 +1,53 @@
+@use "../utils" as *;
+
+.article {
+  display: grid;
+  gap: var(--space-300);
+  max-width: 24rem;
+  background-color: var(--white);
+  padding: var(--space-300);
+  border-radius: var(--space-250);
+  border: var(--space-12) solid var(--grey-950);
+  box-shadow: var(--space-100) var(--space-100) 0 var(--grey-950);
+
+  &__img {
+    border-radius: var(--space-125);
+  }
+
+  &__content {
+    display: grid;
+    gap: var(--space-150);
+    justify-items: start;
+  }
+
+  &__tag {
+    @include preset(4);
+    display: inline-block;
+    border-radius: var(--space-50);
+    background-color: var(--yellow);
+    padding: var(--space-50) var(--space-150);
+  }
+
+  &__title {
+    @include preset(1);
+  }
+
+  &__summary {
+    @include preset(2);
+    color: var(--grey-500);
+  }
+
+  &__author {
+    @include preset(4);
+    display: grid;
+    grid-template-columns: var(--space-400) max-content;
+    align-items: center;
+    gap: var(--space-150);
+  }
+
+  a {
+    &:hover h1 {
+      color: var(--yellow);
+    }
+  }
+}

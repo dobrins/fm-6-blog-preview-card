@@ -1,0 +1,45 @@
+@use "variables" as *;
+@use "sass:map";
+
+// Media Queries
+
+@mixin mq($breakpoint) {
+  @if $breakpoint == s {
+    @media (max-width: 35em) {
+      @content;
+    }
+  } @else if $breakpoint == m {
+    @media (max-width: 50em) {
+      @content;
+    }
+  }
+}
+
+// Typography
+
+$preset-styles: (
+  1: (
+    font-size: var(--space-300),
+    font-weight: var(--extraBold),
+  ),
+  2: (
+    font-size: var(--space-200),
+    font-weight: var(--medium),
+  ),
+  3: (
+    font-size: var(--space-175),
+    font-weight: var(--medium),
+  ),
+  4: (
+    font-size: var(--space-175),
+    font-weight: var(--extraBold),
+  ),
+);
+
+@mixin preset($n) {
+  $preset: map.get($preset-styles, $n);
+
+  @each $prop, $value in $preset {
+    #{$prop}: $value;
+  }
+}
