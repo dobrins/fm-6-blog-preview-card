@@ -107,11 +107,11 @@ a {
   color: currentColor;
 }
 a:focus-visible {
-  outline: 0;
+  outline: 2px solid var(--yellow);
 }
 
 main {
-  width: 100vw;
+  max-width: 100%;
   min-height: 100vh;
   display: grid;
   place-items: center;
