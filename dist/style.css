@@ -34,7 +34,7 @@ body {
   font-size: var(--space-175);
   font-weight: var(--medium);
   font-family: var(--font-body);
-  color: var(--gra-600);
+  color: var(--grey-950);
   background-color: var(--yellow);
   line-height: 1.5;
   letter-spacing: 0;
@@ -111,8 +111,8 @@ a:focus-visible {
 }
 
 main {
-  width: 100dvw;
-  height: 100dvh;
+  width: 100vw;
+  min-height: 100vh;
   display: grid;
   place-items: center;
   padding: var(--space-300);

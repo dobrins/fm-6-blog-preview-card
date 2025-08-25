@@ -1,8 +1,8 @@
 @use "../utils" as *;
 
 main {
-  width: 100dvw;
-  height: 100dvh;
+  width: 100vw;
+  min-height: 100vh;
   display: grid;
   place-items: center;
   padding: var(--space-300);
