@@ -1,6 +1,6 @@
 @use "../utils" as *;
 
-.article {
+.blog-card {
   display: grid;
   gap: var(--space-300);
   max-width: 24rem;
@@ -9,6 +9,10 @@
   border-radius: var(--space-250);
   border: var(--space-12) solid var(--grey-950);
   box-shadow: var(--space-100) var(--space-100) 0 var(--grey-950);
+  position: relative;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
 
   &__img {
     border-radius: var(--space-125);
@@ -45,9 +49,19 @@
     gap: var(--space-150);
   }
 
-  a {
-    &:hover {
-      color: var(--yellow);
-    }
+  &__link {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+  }
+
+  &:hover {
+    transform: translateY(calc(-1 * var(--space-100)));
+    box-shadow: var(--space-200) var(--space-200) var(--space-200)
+      var(--grey-950);
+  }
+
+  &:hover &__title {
+    color: var(--yellow);
   }
 }
